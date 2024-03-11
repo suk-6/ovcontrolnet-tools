@@ -1,2 +1,5 @@
 **/models
 **/__pycache__
+**/build
+**/dist
+**/ovcontrolnet_tools.egg-info
