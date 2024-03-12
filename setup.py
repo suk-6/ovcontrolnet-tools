@@ -3,12 +3,9 @@ import setuptools
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-with open("requirements.txt", "r", encoding="utf-8") as fh:
-    install_requires = fh.read().splitlines()
-
 setuptools.setup(
     name="ovcontrolnet_tools",
-    version="1.0.1",
+    version="1.0.2",
     author="suk-6",
     author_email="me@suk.kr",
     description="Packages for simple implementations of OVControlNet",
@@ -18,7 +15,16 @@ setuptools.setup(
     packages=setuptools.find_packages(
         include=["ovcontrolnet_tools", "ovcontrolnet_tools.*"]
     ),
-    install_requires=install_requires,
+    install_requires=[
+        "torch",
+        "openvino",
+        "controlnet_aux",
+        "diffusers",
+        "transformers",
+        "matplotlib",
+        "accelerate",
+        "mediapipe",
+    ],
     python_requires=">=3.6",
     license="MIT",
 )
